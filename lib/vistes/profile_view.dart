@@ -1,3 +1,4 @@
+import 'package:fitness_time/controladors/date_controller.dart';
 import 'package:fitness_time/models/profile_model.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,7 @@ class ProfileView extends StatelessWidget {
             ),
           ),
           Text(
-            "des del ${profile.registered}",
+            DateController.formatRegistrationDate(profile.registered),
             style: TextStyle(),
           ),
           Padding(

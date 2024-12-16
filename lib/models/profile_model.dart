@@ -6,7 +6,7 @@ class ProfileModel {
   String profileImage;
   double height;
   double weight;
-  String registered;
+  DateTime registered;
 
   // les variables totalTime, totalKm, totalActivities per anar be haurien de venir de camps calculats a partir de la llista d'activitats, pero per l'exemple els donc un valor forçat
   String totalTime;
@@ -48,13 +48,14 @@ List<ActivityModel> antoniaActivities = [
 ];
 
 ProfileModel profile = ProfileModel(
-    name: "Antonia",
-    surname: "Font",
-    profileImage: "https://randomuser.me/api/portraits/women/44.jpg",
-    activities: antoniaActivities,
-    height: 150,
-    weight: 55,
-    totalTime: "2h 45'",
-    totalKm: '212,4',
-    totalActivities: '42',
-    registered: "20 d'abril del 2022");
+  name: "Antonia",
+  surname: "Font",
+  profileImage: "https://randomuser.me/api/portraits/women/44.jpg",
+  activities: antoniaActivities,
+  height: 150,
+  weight: 55,
+  totalTime: "2h 45'",
+  totalKm: '212,4',
+  totalActivities: '42',
+  registered: DateTime(2022, 4, 20),
+);

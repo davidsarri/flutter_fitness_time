@@ -116,7 +116,8 @@ class MainView extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              DateController.formatDateTime(activity.data),
+                              DateController.formatDateTimeActivities(
+                                  activity.data),
                               style: TextStyle(
                                 fontSize: 14,
                                 fontStyle: FontStyle.italic,
