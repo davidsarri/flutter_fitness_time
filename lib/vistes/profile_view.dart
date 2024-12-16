@@ -1,3 +1,4 @@
+import 'package:fitness_time/models/profile_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget {
@@ -21,22 +22,21 @@ class ProfileView extends StatelessWidget {
                 child: Center(
                   child: CircleAvatar(
                     radius: 100,
-                    backgroundImage: NetworkImage(
-                        "https://randomuser.me/api/portraits/women/44.jpg"),
+                    backgroundImage: NetworkImage(profile.profileImage),
                   ),
                 ),
               )),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: Text(
-              "Antònia Font",
+              "${profile.name} ${profile.surname}",
               style: TextStyle(
                 fontSize: 40,
               ),
             ),
           ),
           Text(
-            "des del 20 d'abril del 2022",
+            "des del ${profile.registered}",
             style: TextStyle(),
           ),
           Padding(
@@ -52,7 +52,7 @@ class ProfileView extends StatelessWidget {
                       Icon(Icons.alarm),
                       Text("Time"),
                       Text(
-                        "2h 45'",
+                        profile.totalTime,
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -68,7 +68,7 @@ class ProfileView extends StatelessWidget {
                       Icon(Icons.place),
                       Text("Km"),
                       Text(
-                        "212,4",
+                        profile.totalKm,
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -84,7 +84,7 @@ class ProfileView extends StatelessWidget {
                       Icon(Icons.house),
                       Text("Activities"),
                       Text(
-                        "42",
+                        profile.totalActivities,
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -96,7 +96,7 @@ class ProfileView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 75, right: 75),
+            padding: const EdgeInsets.only(left: 75, right: 75, top: 20),
             child: Row(
               children: [
                 Text(
@@ -108,17 +108,16 @@ class ProfileView extends StatelessWidget {
                 ),
                 Expanded(
                   child: Slider(
-                    value: 150,
+                    value: profile.height,
                     min: 0,
                     max: 500,
                     divisions: 200,
                     onChanged: (double value) {},
-                    activeColor: Colors.deepPurple,
-                    inactiveColor: Colors.deepPurple.shade100,
+                    activeColor: Color(0xffbf63f8),
                   ),
                 ),
                 Text(
-                  "150cm",
+                  "${profile.height % 1 == 0 ? profile.height.toInt() : profile.height} cm",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -140,17 +139,16 @@ class ProfileView extends StatelessWidget {
                 ),
                 Expanded(
                   child: Slider(
-                    value: 150,
+                    value: profile.weight,
                     min: 0,
                     max: 500,
                     divisions: 200,
                     onChanged: (double value) {},
-                    activeColor: Colors.deepPurple,
-                    inactiveColor: Colors.deepPurple.shade100,
+                    activeColor: Color(0xffbf63f8),
                   ),
                 ),
                 Text(
-                  "55 kg",
+                  "${profile.weight % 1 == 0 ? profile.weight.toInt() : profile.weight} kg",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
