@@ -31,11 +31,20 @@ class ProfileModel {
 
 List<ActivityModel> antoniaActivities = [
   ActivityModel(
-      activitat: "Running", data: "Ayer, 18:20", distancia: "7,300 km"),
+    activitat: "Running",
+    data: DateTime(2024, 9, 20, 18, 20),
+    distancia: "7,300 km",
+  ),
   ActivityModel(
-      activitat: "Running", data: "15 Sep 2024, 21:45", distancia: "6,550 km"),
+    activitat: "Running",
+    data: DateTime(2024, 9, 15, 21, 45),
+    distancia: "6,550 km",
+  ),
   ActivityModel(
-      activitat: "Running", data: "10 Sep 2024, 21:33", distancia: "7,100 km"),
+    activitat: "Running",
+    data: DateTime(2024, 9, 10, 21, 33),
+    distancia: "7,100 km",
+  ),
 ];
 
 ProfileModel profile = ProfileModel(

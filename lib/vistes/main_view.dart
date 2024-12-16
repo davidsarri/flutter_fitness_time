@@ -1,3 +1,4 @@
+import 'package:fitness_time/controladors/date_controller.dart';
 import 'package:fitness_time/models/profile_model.dart';
 import 'package:fitness_time/vistes/profile_view.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +116,7 @@ class MainView extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              activity.data,
+                              DateController.formatDateTime(activity.data),
                               style: TextStyle(
                                 fontSize: 14,
                                 fontStyle: FontStyle.italic,

@@ -1,6 +1,6 @@
 class ActivityModel {
   String activitat;
-  String data;
+  DateTime data;
   String distancia;
 
   ActivityModel({
